@@ -1,113 +1,151 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'poppins', 'sans-serif';
-    box-sizing: border-box;
+/* Resetting margin, padding and setting box-sizing for all elements */
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', 'sans-serif';
+	box-sizing: border-box;
 }
 
-.container{
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #153677, #4e085f);
-    padding: 10px;
+/* Setting base font size for the body for rem calculations */
+body {
+	font-size: 100%;
 }
 
-.todo-app{
-    width: 100%;
-    max-width: 540px ;
-    background: white;
-    margin: 100px auto 20px;
-    padding: 40px 30px 70px ;
-    border-radius: 10px;
+/* Container styling for full width and height, with a gradient background */
+.container {
+	width: 100%;
+	min-height: 100vh;
+	background: linear-gradient(135deg, #153677, #4e085f);
+	padding: 2%;
 }
 
-.todo-app h2{
-    color: #002765;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+/* Styling the to-do app box with max width, centering, padding, and border radius */
+.todo-app {
+	width: 90%;
+	max-width: 540px;
+	background: white;
+	margin: 5% auto 2%;
+	padding: 5% 4% 10%;
+	border-radius: 10px;
 }
 
-.todo-app h2 img{
-    width: 30px;
-    margin-left: 10px ;
+/* Styling for the main header including color and margin */
+.todo-app h2 {
+	color: #002765;
+	display: flex;
+	align-items: center;
+	margin-bottom: 5%;
+	font-size: 1.5rem;
+	/* Responsive font size */
 }
 
-.row{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #edeef0;
-    border-radius: 30px;
-    padding-left: 20px;
-    margin-bottom: 25px;
+/* Styling for the icon next to the header */
+.todo-app h2 img {
+	width: 10%;
+	margin-left: 2%;
 }
 
-input{
-    flex: 1;
-    border: none ;
-    outline: none;
-    background: transparent;
-    padding: 10px;
-    font-weight: 14px;
+/* Row styling for the input and button with flex display, background, and padding */
+.row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #edeef0;
+	border-radius: 30px;
+	padding: 2% 5%;
+	margin-bottom: 5%;
 }
 
-button{
-    border-width: none;
-    outline: none;
-    padding: 16px 50px;
-    background: #ff5945;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 40px;
+/* Input field styling within the row */
+input {
+	flex: 1;
+	border: none;
+	outline: none;
+	background: transparent;
+	padding: 2%;
+	font-size: 1rem;
 }
 
-ul li{
-    list-style: none;
-    font-size: 17px;
-    padding: 12px 8px 12px 50px;
-    user-select: none ;
-    cursor: pointer;
-    position: relative;
-
+/* Button styling within the row */
+button {
+	border: none;
+	outline: none;
+	padding: 3% 10%;
+	background: #ff5945;
+	color: white;
+	font-size: 1rem;
+	cursor: pointer;
+	border-radius: 40px;
 }
 
-ul li::before{
-    content: '';
-    position: absolute;
-    height: 28px;
-    width: 28px;
-    border-radius: 50%;
-    background-image: url(images/unchecked.png) ;
-    background-size: cover;
-    background-position: center;
-    top: 12px;
-    left: 8px
+/* List item styling for the to-do tasks */
+ul li {
+	list-style: none;
+	font-size: 1rem;
+	padding: 3% 5% 3% 10%;
+	user-select: none;
+	cursor: pointer;
+	position: relative;
 }
 
-ul li.checked{
-    color: #555;
-    text-decoration: line-through;
+/* Before pseudo-element for unchecked tasks with a custom icon */
+ul li::before {
+	content: '';
+	position: absolute;
+	height: 2rem;
+	width: 2rem;
+	border-radius: 50%;
+	background-image: url(images/bx-circle.svg);
+	background-size: cover;
+	background-position: center;
+	top: 50%;
+	left: 2%;
+	transform: translateY(-50%);
 }
 
-ul li.checked::before{
-    background-image: url(images/checked.png);
+/* Styling for checked tasks */
+ul li.checked {
+	color: #555;
+	text-decoration: line-through;
 }
 
-ul li span{
-    position: absolute;
-    right: 0;
-    top: 5px;
-    width: 40px;
-    height: 40px;
-    font-size: 22px;
-    color: #555;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 50%;
+/* Before pseudo-element for checked tasks with a custom icon */
+ul li.checked::before {
+	background-image: url(images/bx-check-circle.svg);
 }
 
-ul li span:hover{
-    background: #edeef0;
+/* Span styling for the delete button within each task */
+ul li span {
+	position: absolute;
+	right: 2%;
+	top: 50%;
+	width: 2rem;
+	height: 2rem;
+	font-size: 1.5rem;
+	color: #555;
+	line-height: 2rem;
+	text-align: center;
+	border-radius: 50%;
+	transform: translateY(-50%);
+}
+
+/* Hover effect for the delete button */
+ul li span:hover {
+	background: #edeef0;
+}
+
+/* Media Query for larger screens to adjust padding and font sizes */
+@media (min-width: 768px) {
+	.todo-app {
+		padding: 3% 5% 7%;
+	}
+
+	button {
+		padding: 1.5% 7%;
+		font-size: 1.25rem;
+	}
+
+	ul li {
+		font-size: 1.25rem;
+	}
 }

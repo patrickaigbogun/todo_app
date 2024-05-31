@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-do List App</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    
-    <div class="container" >
-        <div class="todo-app">
-            <h2>To-Do List <img src="images/icon.png" alt=""></h2>
-            <div class="row">
-                <input type="text" id="input-box" placeholder="Add your text">
-                <button onclick="addTask()" >Add</button>
-            </div>
-            <ul id="list-container">
-                <!-- <li class="checked" >Task 1</li>
-                <li>Task 2</li>
-                <li>Task 3</li> -->
-            </ul>
-        </div>
 
-    </div>
-<script src="script.js"></script>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>To-do List App</title>
+	<!-- Linking the stylesheet -->
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<!-- Main container for the to-do list app -->
+	<div class="container">
+		<!-- App box containing the header, input, button, and list -->
+		<div class="todo-app">
+			<!-- App header with an icon -->
+			<h2>To-Do List <img src="images/bx-notepad.svg" alt="icon"><img src="images/bx-calendar.svg" alt=""></h2>
+			<!-- Row for the input and add button -->
+			<div class="row">
+				<!-- Input field for new tasks -->
+				<input type="text" id="input-box" placeholder="Add your text">
+				<!-- Button to add new tasks -->
+				<button onclick="addTask()">Add</button>
+			</div>
+			<!-- Unordered list to hold the tasks -->
+			<ul id="list-container"></ul>
+		</div>
+	</div>
+	<!-- Linking the JavaScript file -->
+	<script src="script.js"></script>
 </body>
+
 </html>
