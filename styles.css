@@ -81,10 +81,7 @@ input {
 button {
 	flex: 2;
 	max-width: 10%;
-	text-align: center;
 	background: #1f1f20;
-	color: white;
-	font-size: 1rem;
 	cursor: pointer;
 	border-radius: 40px;
 }
