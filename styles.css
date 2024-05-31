@@ -69,7 +69,7 @@ body {
 input {
 	flex: 1;
 	border: solid black 1px;
-	width: 100%;
+	width: 90%;
 	outline: none;
 	margin: 0;
 	background: transparent;
@@ -80,11 +80,9 @@ input {
 /* Button styling within the row */
 button {
 	flex: 2;
-	border: none;
-	z-index: 10;
-	outline: none;
-	padding: 3% 10%;
-	background: #ff5945;
+	max-width: 10%;
+	text-align: center;
+	background: #1f1f20;
 	color: white;
 	font-size: 1rem;
 	cursor: pointer;
